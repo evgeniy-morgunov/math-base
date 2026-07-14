@@ -1,5 +1,10 @@
 import React, { useState } from 'react';
 import { Problem } from '../types';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
+import 'katex/dist/katex.min.css';
 import styles from './ProblemList.module.css';
 
 interface ProblemListProps {
@@ -94,11 +99,47 @@ export const ProblemList: React.FC<ProblemListProps> = ({ problems, onEdit, onDe
               <div className={styles.cardDetails}>
                 <div className={styles.section}>
                   <h4>Description</h4>
-                  <p>{problem.description}</p>
+                  <div className={styles.markdown}>
+                    <ReactMarkdown
+                      remarkPlugins={[remarkGfm, remarkMath]}
+                      rehypePlugins={[rehypeKatex]}
+                    >
+                      {problem.description}
+                    </ReactMarkdown>
+                  </div>
+                  {problem.images && problem.images.filter(img => img.type === 'description').length > 0 && (
+                    <div className={styles.imageGallery}>
+                      {problem.images
+                        .filter(img => img.type === 'description')
+                        .map(img => (
+                          <div key={img.id} className={styles.imageWrapper}>
+                            <img src={img.data} alt={img.name} title={img.name} />
+                          </div>
+                        ))}
+                    </div>
+                  )}
                 </div>
                 <div className={styles.section}>
                   <h4>Solution</h4>
-                  <p>{problem.solution}</p>
+                  <div className={styles.markdown}>
+                    <ReactMarkdown
+                      remarkPlugins={[remarkGfm, remarkMath]}
+                      rehypePlugins={[rehypeKatex]}
+                    >
+                      {problem.solution}
+                    </ReactMarkdown>
+                  </div>
+                  {problem.images && problem.images.filter(img => img.type === 'solution').length > 0 && (
+                    <div className={styles.imageGallery}>
+                      {problem.images
+                        .filter(img => img.type === 'solution')
+                        .map(img => (
+                          <div key={img.id} className={styles.imageWrapper}>
+                            <img src={img.data} alt={img.name} title={img.name} />
+                          </div>
+                        ))}
+                    </div>
+                  )}
                 </div>
                 <div className={styles.meta}>
                   Created: {new Date(problem.createdAt).toLocaleDateString()}
