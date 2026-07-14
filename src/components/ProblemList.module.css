@@ -147,14 +147,92 @@
   color: rgba(255, 255, 255, 0.9);
 }
 
-.section p {
-  white-space: pre-wrap;
-  word-wrap: break-word;
+.markdown {
   color: rgba(255, 255, 255, 0.8);
   line-height: 1.6;
   font-size: 0.95em;
-  max-height: 200px;
+  max-height: 300px;
   overflow-y: auto;
+}
+
+.markdown :is(h1, h2, h3, h4, h5, h6) {
+  margin: 12px 0 8px;
+  font-weight: 600;
+}
+
+.markdown h1 { font-size: 1.4em; }
+.markdown h2 { font-size: 1.2em; }
+.markdown h3 { font-size: 1.05em; }
+
+.markdown p {
+  margin: 8px 0;
+}
+
+.markdown code {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9em;
+}
+
+.markdown pre {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  border-radius: 4px;
+  overflow-x: auto;
+  margin: 8px 0;
+}
+
+.markdown ul,
+.markdown ol {
+  margin: 8px 0 8px 20px;
+}
+
+.markdown li {
+  margin: 4px 0;
+}
+
+.markdown blockquote {
+  border-left: 3px solid #646cff;
+  padding-left: 10px;
+  margin: 8px 0;
+  color: rgba(255, 255, 255, 0.7);
+  font-style: italic;
+}
+
+.markdown .katex-display {
+  margin: 8px 0;
+  overflow-x: auto;
+}
+
+.imageGallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.imageWrapper {
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(100, 108, 255, 0.2);
+}
+
+.imageWrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-height: 300px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.imageWrapper img:hover {
+  transform: scale(1.02);
 }
 
 .meta {
