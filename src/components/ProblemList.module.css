@@ -1,0 +1,180 @@
+.listContainer {
+  margin-bottom: 30px;
+}
+
+.listContainer h2 {
+  margin-bottom: 15px;
+  font-size: 1.3em;
+}
+
+.problemsList {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.emptyState {
+  padding: 40px 20px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1.1em;
+}
+
+.problemCard {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(100, 108, 255, 0.2);
+  border-radius: 8px;
+  padding: 15px;
+  transition: all 0.3s;
+}
+
+.problemCard:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(100, 108, 255, 0.4);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+
+.titleSection {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.title {
+  font-size: 1.1em;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.2s;
+  margin: 0;
+}
+
+.title:hover {
+  color: #646cff;
+}
+
+.difficulty {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.8em;
+  font-weight: 500;
+  text-transform: capitalize;
+  white-space: nowrap;
+}
+
+.difficultyEasy {
+  background-color: rgba(76, 175, 80, 0.3);
+  color: #4caf50;
+}
+
+.difficultyMedium {
+  background-color: rgba(255, 193, 7, 0.3);
+  color: #ffc107;
+}
+
+.difficultyHard {
+  background-color: rgba(244, 67, 54, 0.3);
+  color: #f44336;
+}
+
+.cardActions {
+  display: flex;
+  gap: 8px;
+}
+
+.editBtn,
+.deleteBtn {
+  padding: 6px 12px;
+  font-size: 0.9em;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.87);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.editBtn:hover {
+  background-color: rgba(100, 108, 255, 0.2);
+  border-color: #646cff;
+}
+
+.deleteBtn:hover {
+  background-color: rgba(244, 67, 54, 0.2);
+  border-color: #f44336;
+}
+
+.tagsSection {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.tag {
+  display: inline-block;
+  padding: 4px 10px;
+  background-color: rgba(100, 108, 255, 0.2);
+  border: 1px solid rgba(100, 108, 255, 0.4);
+  border-radius: 12px;
+  font-size: 0.85em;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+.cardDetails {
+  margin: 15px 0;
+  padding: 15px 0;
+  border-top: 1px solid rgba(100, 108, 255, 0.2);
+  border-bottom: 1px solid rgba(100, 108, 255, 0.2);
+}
+
+.section {
+  margin-bottom: 15px;
+}
+
+.section h4 {
+  font-size: 0.95em;
+  margin-bottom: 8px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.section p {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  font-size: 0.95em;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.meta {
+  font-size: 0.85em;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 10px;
+}
+
+.expandBtn {
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(100, 108, 255, 0.15);
+  border: 1px solid rgba(100, 108, 255, 0.3);
+  color: rgba(255, 255, 255, 0.87);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: all 0.2s;
+}
+
+.expandBtn:hover {
+  background-color: rgba(100, 108, 255, 0.25);
+}
