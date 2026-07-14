@@ -1,7 +1,7 @@
 {
   "name": "math-base",
-  "version": "1.0.0",
-  "description": "App for saving olympiad math problems and solutions with search and tagging",
+  "version": "2.0.0",
+  "description": "App for saving olympiad math problems and solutions with search, tagging, LaTeX, Markdown, and image support",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -14,7 +14,13 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "dexie": "^3.2.4",
-    "zustand": "^4.4.0"
+    "zustand": "^4.4.0",
+    "marked": "^11.1.1",
+    "react-markdown": "^9.0.1",
+    "remark-gfm": "^4.0.0",
+    "remark-math": "^6.0.0",
+    "rehype-katex": "^7.0.0",
+    "katex": "^0.16.9"
   },
   "devDependencies": {
     "@types/react": "^18.2.0",
